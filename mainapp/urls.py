@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path
-from .views import main, anime_details, anime_watching, blog, blog_details, categories, login, signup
+from .views import main, anime_details, anime_watching, blog, blog_details, categories, login, signup, search
 
 app_name = 'mainapp'
 
@@ -35,4 +35,6 @@ urlpatterns = [
     path('login', login, name='login'),
 
     path('signup', signup, name='signup'),
+
+    path('search/', search, name='search'),  # 검색 기능 추가
 ]
