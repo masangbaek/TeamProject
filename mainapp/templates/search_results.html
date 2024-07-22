@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Search Results
+{% endblock %}
+
+{% block content %}
+<form class="search-form" method="GET" action="{% url 'mainapp:search' %}">
+    <label for="search-query" class="sr-only">Search for games</label>
+    <input class="search-input" type="text" id="search-query" name="q" placeholder="Search for games" value="{{ query }}">
+    <button class="search-button" type="submit"><i class="icon_search"></i></button>
+</form>
+
+
+
+<ul>
+    {% if results %}
+        {% for game in results %}
+            <li>
+                <strong>{{ game.name }}</strong><br>
+                Similarity Score: {{ game.similarity_score }}<br>
+                Developer: {{ game.developer }}<br>
+                Genre: {{ game.genre }}<br>
+                Release Date: {{ game.release_date }}<br>
+                Recommendation Count: {{ game.recommendation_count }}<br>
+                Detailed Description: {{ game.detailed_description }}<br>
+            </li>
+        {% endfor %}
+    {% else %}
+        <li>No results found</li>
+    {% endif %}
+</ul>
+{% endblock %}
