@@ -35,12 +35,12 @@
                         <h3>Login</h3>
                         <form action="#">
                             <div class="input__item">
-                                <label for="email">Email</label>
+                                <!-- <label for="email">Email</label> -->
                                 <input type="text" id="email" placeholder="Email address">
                                 <span class="icon_mail"></span>
                             </div>
                             <div class="input__item">
-                                <label for="password">Password</label>
+                                <!-- <label for="password">Password</label> -->
                                 <input type="text" id="password" placeholder="Password">
                                 <span class="icon_lock"></span>
                             </div>
@@ -76,18 +76,6 @@
     </section>
     <!-- Login Section End -->
     {% include "footer.html" %}
-
-    <!-- Search model Begin -->
-    <div class="search-model">
-        <div class="h-100 d-flex align-items-center justify-content-center">
-            <div class="search-close-switch"><i class="icon_close"></i></div>
-            <form class="search-model-form" method="GET" action="{% url 'mainapp:search' %}">
-                <label for="search-input">Search</label>
-                <input type="text" id="search-input" name="q" placeholder="Search here.....">
-            </form>
-        </div>
-    </div>
-    <!-- Search model end -->
 
     <!-- Js Plugins -->
     <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>

@@ -78,8 +78,7 @@ WSGI_APPLICATION = 'TeamProject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': BASE_DIR / 'db.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'demo.db'),  # 업로드된 파일 경로로 변경
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
